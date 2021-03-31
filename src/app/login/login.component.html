@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm" class="login">
+    <div class="form-group">
+        <label for="exampleInputEmail1" style="color: rgb(92, 8, 92);">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+        <span class="badge badge-danger">We'll never share your email</span>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" style="color: rgb(92, 8, 92);">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1"  formControlName="password" placeholder="password">
+      </div>
+      <button type="submit" (click)="tryRegister(loginForm.value)" class="btn btn-primary">register</button>
+      <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-info" style="float: right;">Login</button>
+    <div class="d-flex justify-content-center">    
+      <button type="button" class="btn btn-light" (click)="tryGoogleLogin()" style="width: 50ex; margin-top: 2ex;margin-bottom: 2ex; background-color: rgb(230, 230, 230);"><span style="color: blue;">G</span><span style="color: red;">o</span><span style="color: rgb(251 188 5);">o</span>gl<span style="color: red;">e</span></button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" (click)="tryFacebookLogin()" class="btn btn-primary" style="width: 50ex;">facbook</button>
+    </div>
+</form>
+
+
+
+
